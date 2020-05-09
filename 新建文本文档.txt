@@ -1,7 +1,0 @@
-body {
-      background:  ""D:\steam\steamapps\workshop\content\431960\1498197700\preview.png"");//自己喜欢的图片地址
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-position: 50% 50%;
-}
