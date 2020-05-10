@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Markdown的基本语法</title>
+      <link href="/2020/05/09/my-first-post/"/>
+      <url>/2020/05/09/my-first-post/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一：标题"><a href="#一：标题" class="headerlink" title="一：标题"></a>一：标题</h1><p>想要设置一个标题，可以用#来表示。<br>比如一级标题是#，二级标题是##，以此类推</p><h1 id="二：字体"><a href="#二：字体" class="headerlink" title="二：字体"></a>二：字体</h1><p>想要加粗字体，在字体两边分别用**包括起来。</p><p><strong>这个例子</strong><br>    <a id="more"></a><br>想要斜体，在字体两边分别用#包括起来。<br><em>这个粒子</em></p><p>想要斜体加粗，在字体两边分别用###包括起来。<br><strong><em>这个例子</em></strong></p><p>删除线，在文字两边用<del>包括起来<br>~</del>这是删除线~~</p><h1 id="三：引用"><a href="#三：引用" class="headerlink" title="三：引用"></a>三：引用</h1><p>在引用的文字面前加&gt;</p><blockquote><p>这是个例子</p></blockquote><h1 id="四：分割线"><a href="#四：分割线" class="headerlink" title="四：分割线"></a>四：分割线</h1><p> 例子：</p><hr><hr><h1 id="五：插入图片"><a href="#五：插入图片" class="headerlink" title="五：插入图片"></a>五：插入图片</h1><p>插入本地图片</p><p>！<a href shiyan\background.png"">faded</a></p><p>插入网站图片</p><p>![avatar]（图片地址‘图片title’）<br>例子如下：</p><p><img src="https://s1.ax1x.com/2020/05/10/Y3Go1P.md.png" alt="fadad meomories"><br>#超链接</p><p>语法：</p><pre><code>[超链接名](超链接地址 &quot;超链接title&quot;)  </code></pre><p>title可加可不加<br>例子：</p><p><a href="http://github.com/cczh" target="_blank" rel="noopener">我的GitHub</a></p><p>#代码#<br>用法：</p><p>单行代码：代码之间分别用一个反引号包起来</p><p><code>代码内容</code></p><p>代码块：</p><pre><code>（```）    code...    code...    code...(```)    </code></pre><p>例子：</p><p>单行代码</p><p><code>int main（）</code></p><p>代码块：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int main()&#123;</span><br><span class="line">printf(&quot;Hello world&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2020/05/09/hello-world/"/>
+      <url>/2020/05/09/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
