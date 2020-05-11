@@ -4,11 +4,38 @@
   
     
     <entry>
+      <title>PAT1155heap-path</title>
+      <link href="/2020/05/11/PAT1155Heap-paths/"/>
+      <url>/2020/05/11/PAT1155Heap-paths/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1155Heap-Paths"><a href="#1155Heap-Paths" class="headerlink" title="1155Heap Paths"></a>1155Heap Paths</h1><p>In computer science, a heap is a specialized tree-based data structure that satisfies the heap property: if P is a parent node of C, then the key (the value) of P is either greater than or equal to (in a max heap) or less than or equal to (in a min heap) the key of C. A common implementation of a heap is the binary heap, in which the tree is a complete binary tree. (Quoted from Wikipedia at <a href="https://en.wikipedia.org/wiki/Heap_(data_structure)" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Heap_(data_structure)</a>)</p><p>One thing for sure is that all the keys along any path from the root to a leaf in a max/min heap must be in non-increasing/non-decreasing order.</p><p>Your job is to check every path in a given complete binary tree, in order to tell if it is a heap or not.</p><p>Input Specification:<br>Each input file contains one test case. For each case, the first line gives a positive integer N (1&lt;N≤1,000), the number of keys in the tree. Then the next line contains N distinct integer keys (all in the range of int), which gives the level order traversal sequence of a complete binary tree.</p><p>Output Specification:<br>For each given tree, first print all the paths from the root to the leaves. Each path occupies a line, with all the numbers separated by a space, and no extra space at the beginning or the end of the line. The paths must be printed in the following order: for each node in the tree, all the paths in its right subtree must be printed before those in its left subtree.</p><p>Finally print in a line Max Heap if it is a max heap, or Min Heap for a min heap, or Not Heap if it is not a heap at all.</p><p>Sample Input 1:<br>8<br>98 72 86 60 65 12 23 50  </p><p>Sample Output 1:<br>98 86 23<br>98 86 12<br>98 72 65<br>98 72 60 50<br>Max Heap  </p><p>Sample Input 2:<br>8<br>8 38 25 58 52 82 70 60  </p><p>Sample Output 2:<br>8 25 70<br>8 25 82<br>8 38 52<br>8 38 58 60<br>Min Heap  </p><p>Sample Input 3:<br>8<br>10 28 15 12 34 9 8 56  </p><p>Sample Output 3:<br>10 15 8<br>10 15 9<br>10 28 34<br>10 28 12 56<br>Not Heap  </p><hr><p>##题目大意：<br>给你n个数，然后通过层次遍历构成一颗二叉树。<br>你要从右到左输出每个从根到叶子的路径。并判断是最小堆，最大堆还是不是一个堆。 </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> PAT </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PAT </tag>
+            
+            <tag> dfs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Markdown的基本语法</title>
       <link href="/2020/05/09/my-first-post/"/>
       <url>/2020/05/09/my-first-post/</url>
       
-        <content type="html"><![CDATA[<h1 id="一：标题"><a href="#一：标题" class="headerlink" title="一：标题"></a>一：标题</h1><p>想要设置一个标题，可以用#来表示。<br>比如一级标题是#，二级标题是##，以此类推</p><h1 id="二：字体"><a href="#二：字体" class="headerlink" title="二：字体"></a>二：字体</h1><p>想要加粗字体，在字体两边分别用**包括起来。</p><p><strong>这个例子</strong><br>    <a id="more"></a><br>想要斜体，在字体两边分别用#包括起来。<br><em>这个粒子</em></p><p>想要斜体加粗，在字体两边分别用###包括起来。<br><strong><em>这个例子</em></strong></p><p>删除线，在文字两边用<del>包括起来<br>~</del>这是删除线~~</p><h1 id="三：引用"><a href="#三：引用" class="headerlink" title="三：引用"></a>三：引用</h1><p>在引用的文字面前加&gt;</p><blockquote><p>这是个例子</p></blockquote><h1 id="四：分割线"><a href="#四：分割线" class="headerlink" title="四：分割线"></a>四：分割线</h1><p> 例子：</p><hr><hr><h1 id="五：插入图片"><a href="#五：插入图片" class="headerlink" title="五：插入图片"></a>五：插入图片</h1><p>插入本地图片</p><p>！<a href shiyan\background.png"">faded</a></p><p>插入网站图片</p><p>![avatar]（图片地址‘图片title’）<br>例子如下：</p><p><img src="https://s1.ax1x.com/2020/05/10/Y3Go1P.md.png" alt="fadad meomories"><br>#超链接</p><p>语法：</p><pre><code>[超链接名](超链接地址 &quot;超链接title&quot;)  </code></pre><p>title可加可不加<br>例子：</p><p><a href="http://github.com/cczh" target="_blank" rel="noopener">我的GitHub</a></p><p>#代码#<br>用法：</p><p>单行代码：代码之间分别用一个反引号包起来</p><p><code>代码内容</code></p><p>代码块：</p><pre><code>（```）    code...    code...    code...(```)    </code></pre><p>例子：</p><p>单行代码</p><p><code>int main（）</code></p><p>代码块：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int main()&#123;</span><br><span class="line">printf(&quot;Hello world&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="一：标题"><a href="#一：标题" class="headerlink" title="一：标题"></a>一：标题</h1><p>想要设置一个标题，可以用#来表示。<br>比如一级标题是#，二级标题是##，以此类推</p><h1 id="二：字体"><a href="#二：字体" class="headerlink" title="二：字体"></a>二：字体</h1><p>想要加粗字体，在字体两边分别用**包括起来。</p><p><strong>这个例子</strong><br>    <a id="more"></a><br>想要斜体，在字体两边分别用#包括起来。<br><em>这个粒子</em></p><p>想要斜体加粗，在字体两边分别用###包括起来。<br><strong><em>这个例子</em></strong></p><p>删除线，在文字两边用<del>包括起来<br>~</del>这是删除线~~</p><h1 id="三：引用"><a href="#三：引用" class="headerlink" title="三：引用"></a>三：引用</h1><p>在引用的文字面前加&gt;</p><blockquote><p>这是个例子</p></blockquote><h1 id="四：分割线"><a href="#四：分割线" class="headerlink" title="四：分割线"></a>四：分割线</h1><p> 例子：</p><hr><hr><h1 id="五：插入图片"><a href="#五：插入图片" class="headerlink" title="五：插入图片"></a>五：插入图片</h1><p>插入本地图片</p><p>！<a href shiyan\background.png"">faded</a></p><p>插入网站图片</p><p>![avatar]（图片地址‘图片title’）<br>例子如下：</p><p><img src="https://s1.ax1x.com/2020/05/10/Y3Go1P.md.png" alt="fadad meomories"><br>#超链接</p><p>语法：</p><pre><code>[超链接名](超链接地址 &quot;超链接title&quot;)  </code></pre><p>title可加可不加<br>例子：</p><p><a href="http://github.com/cczh" target="_blank" rel="noopener">我的GitHub</a></p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>用法：</p><p>单行代码：代码之间分别用一个反引号包起来</p><p><code>代码内容</code></p><p>代码块：</p><pre><code>（```）    code...    code...    code...(```)    </code></pre><p>例子：</p><p>单行代码</p><p><code>int main（）</code></p><p>代码块：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int main()&#123;</span><br><span class="line">printf(&quot;Hello world&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -23,19 +50,6 @@
             <tag> Markdown </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2020/05/09/hello-world/"/>
-      <url>/2020/05/09/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
       
     </entry>
     
