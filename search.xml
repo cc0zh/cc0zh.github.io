@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>leetcode104一棵树的最大深度</title>
+      <link href="/2020/05/12/%E4%B8%80%E6%A3%B5%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6/"/>
+      <url>/2020/05/12/%E4%B8%80%E6%A3%B5%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6/</url>
+      
+        <content type="html"><![CDATA[<h1 id="二叉树的深度"><a href="#二叉树的深度" class="headerlink" title="二叉树的深度"></a>二叉树的深度</h1><p>输入一棵二叉树的根节点，求该树的深度。从根节点到叶节点依次经过的节点（含根、叶节点）形成树的一条路径，最长路径的长度为树的深度。</p><p>例如：</p><p>给定二叉树 [3,9,20,null,null,15,7]，</p><p>   3<br>   /\<br>  9  20<br>     / \<br>   15   7<br>返回它的最大深度 3 。</p><hr><h2 id="dfs递归1"><a href="#dfs递归1" class="headerlink" title="dfs递归1"></a>dfs递归1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int maxn&#x3D;0;</span><br><span class="line">    void dfs(TreeNode* root,int k)</span><br><span class="line">    &#123;</span><br><span class="line">        if(root-&gt;left&#x3D;&#x3D;NULL&amp;&amp;root-&gt;right&#x3D;&#x3D;NULL) </span><br><span class="line">        </span><br><span class="line">         maxn&#x3D;max(maxn,k);</span><br><span class="line">        if(root-&gt;left)dfs(root-&gt;left,k+1); &#x2F;&#x2F;不能时k++</span><br><span class="line">        if(root-&gt;right)dfs(root-&gt;right,k+1);</span><br><span class="line">    &#125;</span><br><span class="line">    int maxDepth(TreeNode* root) &#123;</span><br><span class="line">       </span><br><span class="line">        if(root&#x3D;&#x3D;NULL)return 0;</span><br><span class="line">       dfs(root,1);</span><br><span class="line">       return maxn;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><hr><h2 id="dfs递归2"><a href="#dfs递归2" class="headerlink" title="dfs递归2"></a>dfs递归2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int maxDepth(TreeNode* root) &#123;</span><br><span class="line">        if(root&#x3D;&#x3D;NULL)return 0;</span><br><span class="line">        int ld&#x3D;maxDepth(root-&gt;left);</span><br><span class="line">        int rd&#x3D;maxDepth(root-&gt;right);</span><br><span class="line">        return max(ld,rd)+1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><hr><h2 id="bfs层次"><a href="#bfs层次" class="headerlink" title="bfs层次"></a>bfs层次</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int maxDepth(TreeNode* root) &#123;</span><br><span class="line">    queue&lt;TreeNode*&gt; q;</span><br><span class="line">        if (root) q.push(root);</span><br><span class="line">        int ans &#x3D; 0;</span><br><span class="line">        while (!q.empty()) &#123;</span><br><span class="line">            for (int i &#x3D; q.size() - 1; i &gt;&#x3D; 0; --i) &#123;</span><br><span class="line">                TreeNode* cur &#x3D; q.front();</span><br><span class="line">                q.pop();</span><br><span class="line">                if (cur-&gt;left) q.push(cur-&gt;left);</span><br><span class="line">                if (cur-&gt;right) q.push(cur-&gt;right);</span><br><span class="line">            &#125;</span><br><span class="line">            ++ans;</span><br><span class="line">        &#125;</span><br><span class="line">        return ans;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;这个循环特别重要</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> -leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> dfs </tag>
+            
+            <tag> bfs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>leetcode50-pow-x-n</title>
       <link href="/2020/05/11/leetcode50-pow-x-n/"/>
       <url>/2020/05/11/leetcode50-pow-x-n/</url>

@@ -22,22 +22,21 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="一：标题想要设置一个标题，可以用#来表示。比如一级标题是#，二级标题是##，以此类推 二：字体想要加粗字体，在字体两边分别用**包括起来。 这个例子">
+  <meta name="description" content="二叉树的深度输入一棵二叉树的根节点，求该树的深度。从根节点到叶节点依次经过的节点（含根、叶节点）形成树的一条路径，最长路径的长度为树的深度。 例如： 给定二叉树 [3,9,20,null,null,15,7]，    3   &#x2F;\  9  20     &#x2F; \   15   7返回它的最大深度 3 。  dfs递归1123456789101112131415161718class Solution">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown的基本语法">
-<meta property="og:url" content="http://yoursite.com/2020/05/09/my-first-post/index.html">
+<meta property="og:title" content="leetcode104一棵树的最大深度">
+<meta property="og:url" content="http://yoursite.com/2020/05/12/%E4%B8%80%E6%A3%B5%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6/index.html">
 <meta property="og:site_name" content="小Cのblog">
-<meta property="og:description" content="一：标题想要设置一个标题，可以用#来表示。比如一级标题是#，二级标题是##，以此类推 二：字体想要加粗字体，在字体两边分别用**包括起来。 这个例子">
+<meta property="og:description" content="二叉树的深度输入一棵二叉树的根节点，求该树的深度。从根节点到叶节点依次经过的节点（含根、叶节点）形成树的一条路径，最长路径的长度为树的深度。 例如： 给定二叉树 [3,9,20,null,null,15,7]，    3   &#x2F;\  9  20     &#x2F; \   15   7返回它的最大深度 3 。  dfs递归1123456789101112131415161718class Solution">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s1.ax1x.com/2020/05/10/Y3Go1P.md.png">
-<meta property="article:published_time" content="2020-05-09T15:05:00.000Z">
-<meta property="article:modified_time" content="2020-05-11T09:56:23.063Z">
+<meta property="article:published_time" content="2020-05-12T05:13:40.000Z">
+<meta property="article:modified_time" content="2020-05-12T05:45:00.094Z">
 <meta property="article:author" content="C C">
-<meta property="article:tag" content="Markdown">
+<meta property="article:tag" content="dfs">
+<meta property="article:tag" content="bfs">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s1.ax1x.com/2020/05/10/Y3Go1P.md.png">
 
-<link rel="canonical" href="http://yoursite.com/2020/05/09/my-first-post/">
+<link rel="canonical" href="http://yoursite.com/2020/05/12/%E4%B8%80%E6%A3%B5%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6/">
 
 
 <script id="page-configurations">
@@ -50,7 +49,7 @@
   };
 </script>
 
-  <title>Markdown的基本语法 | 小Cのblog</title>
+  <title>leetcode104一棵树的最大深度 | 小Cのblog</title>
   
 
 
@@ -203,7 +202,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/09/my-first-post/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/12/%E4%B8%80%E6%A3%B5%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -216,7 +215,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Markdown的基本语法
+          leetcode104一棵树的最大深度
         </h1>
 
         <div class="post-meta">
@@ -225,23 +224,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-05-09 23:05:00" itemprop="dateCreated datePublished" datetime="2020-05-09T23:05:00+08:00">2020-05-09</time>
+              <time title="创建时间：2020-05-12 13:13:40 / 修改时间：13:45:00" itemprop="dateCreated datePublished" datetime="2020-05-12T13:13:40+08:00">2020-05-12</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-11 17:56:23" itemprop="dateModified" datetime="2020-05-11T17:56:23+08:00">2020-05-11</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Markdown/" itemprop="url" rel="index"><span itemprop="name">Markdown</span></a>
+                  <a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">-leetcode</span></a>
                 </span>
             </span>
 
@@ -256,39 +249,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="一：标题"><a href="#一：标题" class="headerlink" title="一：标题"></a>一：标题</h1><p>想要设置一个标题，可以用#来表示。<br>比如一级标题是#，二级标题是##，以此类推</p>
-<h1 id="二：字体"><a href="#二：字体" class="headerlink" title="二：字体"></a>二：字体</h1><p>想要加粗字体，在字体两边分别用**包括起来。</p>
-<p><strong>这个例子</strong><br>    <a id="more"></a><br>想要斜体，在字体两边分别用#包括起来。<br><em>这个粒子</em></p>
-<p>想要斜体加粗，在字体两边分别用###包括起来。<br><strong><em>这个例子</em></strong></p>
-<p>删除线，在文字两边用<del>包括起来<br>~</del>这是删除线~~</p>
-<h1 id="三：引用"><a href="#三：引用" class="headerlink" title="三：引用"></a>三：引用</h1><p>在引用的文字面前加&gt;</p>
-<blockquote>
-<p>这是个例子</p>
-</blockquote>
-<h1 id="四：分割线"><a href="#四：分割线" class="headerlink" title="四：分割线"></a>四：分割线</h1><p> 例子：</p>
+        <h1 id="二叉树的深度"><a href="#二叉树的深度" class="headerlink" title="二叉树的深度"></a>二叉树的深度</h1><p>输入一棵二叉树的根节点，求该树的深度。从根节点到叶节点依次经过的节点（含根、叶节点）形成树的一条路径，最长路径的长度为树的深度。</p>
+<p>例如：</p>
+<p>给定二叉树 [3,9,20,null,null,15,7]，</p>
+<p>   3<br>   /\<br>  9  20<br>     / \<br>   15   7<br>返回它的最大深度 3 。</p>
 <hr>
+<h2 id="dfs递归1"><a href="#dfs递归1" class="headerlink" title="dfs递归1"></a>dfs递归1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int maxn&#x3D;0;</span><br><span class="line">    void dfs(TreeNode* root,int k)</span><br><span class="line">    &#123;</span><br><span class="line">        if(root-&gt;left&#x3D;&#x3D;NULL&amp;&amp;root-&gt;right&#x3D;&#x3D;NULL) </span><br><span class="line">        </span><br><span class="line">         maxn&#x3D;max(maxn,k);</span><br><span class="line">        if(root-&gt;left)dfs(root-&gt;left,k+1); &#x2F;&#x2F;不能时k++</span><br><span class="line">        if(root-&gt;right)dfs(root-&gt;right,k+1);</span><br><span class="line">    &#125;</span><br><span class="line">    int maxDepth(TreeNode* root) &#123;</span><br><span class="line">       </span><br><span class="line">        if(root&#x3D;&#x3D;NULL)return 0;</span><br><span class="line">       dfs(root,1);</span><br><span class="line">       return maxn;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <hr>
-<h1 id="五：插入图片"><a href="#五：插入图片" class="headerlink" title="五：插入图片"></a>五：插入图片</h1><p>插入本地图片</p>
-<p>！<a href shiyan\background.png"">faded</a></p>
-<p>插入网站图片</p>
-<p>![avatar]（图片地址‘图片title’）<br>例子如下：</p>
-<p><img src="https://s1.ax1x.com/2020/05/10/Y3Go1P.md.png" alt="fadad meomories"><br>#超链接</p>
-<p>语法：</p>
-<pre><code>[超链接名](超链接地址 &quot;超链接title&quot;)  </code></pre><p>title可加可不加<br>例子：</p>
-<p><a href="http://github.com/cczh" target="_blank" rel="noopener">我的GitHub</a></p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>用法：</p>
-<p>单行代码：代码之间分别用一个反引号包起来</p>
-<p><code>代码内容</code></p>
-<p>代码块：</p>
-<pre><code>（```）
-    code...
-    code...
-    code...
-(```)    </code></pre><p>例子：</p>
-<p>单行代码</p>
-<p><code>int main（）</code></p>
-<p>代码块：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int main()&#123;</span><br><span class="line">	printf(&quot;Hello world&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="dfs递归2"><a href="#dfs递归2" class="headerlink" title="dfs递归2"></a>dfs递归2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int maxDepth(TreeNode* root) &#123;</span><br><span class="line">        if(root&#x3D;&#x3D;NULL)return 0;</span><br><span class="line">        int ld&#x3D;maxDepth(root-&gt;left);</span><br><span class="line">        int rd&#x3D;maxDepth(root-&gt;right);</span><br><span class="line">        return max(ld,rd)+1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="bfs层次"><a href="#bfs层次" class="headerlink" title="bfs层次"></a>bfs层次</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int maxDepth(TreeNode* root) &#123;</span><br><span class="line">    queue&lt;TreeNode*&gt; q;</span><br><span class="line">        if (root) q.push(root);</span><br><span class="line">        int ans &#x3D; 0;</span><br><span class="line">        while (!q.empty()) &#123;</span><br><span class="line">            for (int i &#x3D; q.size() - 1; i &gt;&#x3D; 0; --i) &#123;</span><br><span class="line">                TreeNode* cur &#x3D; q.front();</span><br><span class="line">                q.pop();</span><br><span class="line">                if (cur-&gt;left) q.push(cur-&gt;left);</span><br><span class="line">                if (cur-&gt;right) q.push(cur-&gt;right);</span><br><span class="line">            &#125;</span><br><span class="line">            ++ans;</span><br><span class="line">        &#125;</span><br><span class="line">        return ans;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;这个循环特别重要</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
     </div>
 
     
@@ -297,7 +269,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Markdown/" rel="tag"># Markdown</a>
+              <a href="/tags/dfs/" rel="tag"># dfs</a>
+              <a href="/tags/bfs/" rel="tag"># bfs</a>
           </div>
 
         
@@ -305,11 +278,11 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/05/11/PAT1155Heap-paths/" rel="next" title="PAT1155heap-path">
-      PAT1155heap-path <i class="fa fa-chevron-right"></i>
+    <a href="/2020/05/11/leetcode50-pow-x-n/" rel="prev" title="leetcode50-pow-x-n">
+      <i class="fa fa-chevron-left"></i> leetcode50-pow-x-n
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -368,7 +341,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一：标题"><span class="nav-number">1.</span> <span class="nav-text">一：标题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二：字体"><span class="nav-number">2.</span> <span class="nav-text">二：字体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三：引用"><span class="nav-number">3.</span> <span class="nav-text">三：引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四：分割线"><span class="nav-number">4.</span> <span class="nav-text">四：分割线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五：插入图片"><span class="nav-number">5.</span> <span class="nav-text">五：插入图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">6.</span> <span class="nav-text">代码</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#二叉树的深度"><span class="nav-number">1.</span> <span class="nav-text">二叉树的深度</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#dfs递归1"><span class="nav-number">1.1.</span> <span class="nav-text">dfs递归1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dfs递归2"><span class="nav-number">1.2.</span> <span class="nav-text">dfs递归2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bfs层次"><span class="nav-number">1.3.</span> <span class="nav-text">bfs层次</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
