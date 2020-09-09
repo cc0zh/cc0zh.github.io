@@ -22,16 +22,17 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="title: sprintf和printftags:  linuxcategories:  linux out&#x3D;fopen(“&#x2F;dev&#x2F;tty”,”w”);printf(“hello”);sprintf(out,”sprintf out\n”);printf(“printf\n”);.&#x2F;test执行得到 fprintf outprintf   .&#x2F;test &gt;file执行得到 fprintf">
+  <meta name="description" content="out&#x3D;fopen(&quot;&#x2F;dev&#x2F;tty&quot;,&quot;w&quot;); printf(&quot;hello&quot;); sprintf(out,&quot;sprintf out\n&quot;); printf(&quot;printf\n&quot;);.&#x2F;test执行得到 fprintf out printf.&#x2F;test &gt;file执行得到 fprintf">
 <meta property="og:type" content="article">
-<meta property="og:title" content="fprintf和printf">
+<meta property="og:title" content="sprintf和printf">
 <meta property="og:url" content="http://yoursite.com/2020/09/09/fprintf%E5%92%8Cprintf/index.html">
 <meta property="og:site_name" content="小Cのblog">
-<meta property="og:description" content="title: sprintf和printftags:  linuxcategories:  linux out&#x3D;fopen(“&#x2F;dev&#x2F;tty”,”w”);printf(“hello”);sprintf(out,”sprintf out\n”);printf(“printf\n”);.&#x2F;test执行得到 fprintf outprintf   .&#x2F;test &gt;file执行得到 fprintf">
+<meta property="og:description" content="out&#x3D;fopen(&quot;&#x2F;dev&#x2F;tty&quot;,&quot;w&quot;); printf(&quot;hello&quot;); sprintf(out,&quot;sprintf out\n&quot;); printf(&quot;printf\n&quot;);.&#x2F;test执行得到 fprintf out printf.&#x2F;test &gt;file执行得到 fprintf">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-09T06:15:02.939Z">
-<meta property="article:modified_time" content="2020-09-09T06:18:11.538Z">
+<meta property="article:modified_time" content="2020-09-09T09:19:13.079Z">
 <meta property="article:author" content="C C">
+<meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2020/09/09/fprintf%E5%92%8Cprintf/">
@@ -47,7 +48,7 @@
   };
 </script>
 
-  <title>fprintf和printf | 小Cのblog</title>
+  <title>sprintf和printf | 小Cのblog</title>
   
 
 
@@ -213,7 +214,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          fprintf和printf
+          sprintf和printf
         </h1>
 
         <div class="post-meta">
@@ -224,7 +225,16 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-09-09 14:15:02 / 修改时间：14:18:11" itemprop="dateCreated datePublished" datetime="2020-09-09T14:15:02+08:00">2020-09-09</time>
+              <time title="创建时间：2020-09-09 14:15:02 / 修改时间：17:19:13" itemprop="dateCreated datePublished" datetime="2020-09-09T14:15:02+08:00">2020-09-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
             </span>
 
           
@@ -238,16 +248,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>title: sprintf和printf<br>tags:</p>
-<ul>
-<li><p>linux<br>categories:</p>
-</li>
-<li><p>linux</p>
-<p>out=fopen(“/dev/tty”,”w”);<br>printf(“hello”);<br>sprintf(out,”sprintf out\n”);<br>printf(“printf\n”);<br>./test<br>执行得到</p>
-<p>fprintf out<br>printf</p>
-</li>
-</ul>
-<p>./test &gt;file执行得到</p>
+        <pre><code>out=fopen(&quot;/dev/tty&quot;,&quot;w&quot;);
+printf(&quot;hello&quot;);
+sprintf(out,&quot;sprintf out\n&quot;);
+printf(&quot;printf\n&quot;);</code></pre><p>./test<br>执行得到</p>
+<pre><code>fprintf out
+printf</code></pre><p>./test &gt;file执行得到</p>
 <pre><code>fprintf out</code></pre><p>vim file</p>
 <pre><code>printf</code></pre><h1 id="用来消除在终端中，用户不想看到的内容"><a href="#用来消除在终端中，用户不想看到的内容" class="headerlink" title="用来消除在终端中，用户不想看到的内容"></a>用来消除在终端中，用户不想看到的内容</h1>
     </div>
@@ -257,6 +263,9 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+          </div>
 
         
 

@@ -4,13 +4,25 @@
   
     
     <entry>
-      <title>fprintf和printf</title>
+      <title>sprintf和printf</title>
       <link href="/2020/09/09/fprintf%E5%92%8Cprintf/"/>
       <url>/2020/09/09/fprintf%E5%92%8Cprintf/</url>
       
-        <content type="html"><![CDATA[<p>title: sprintf和printf<br>tags:</p><ul><li><p>linux<br>categories:</p></li><li><p>linux</p><p>out=fopen(“/dev/tty”,”w”);<br>printf(“hello”);<br>sprintf(out,”sprintf out\n”);<br>printf(“printf\n”);<br>./test<br>执行得到</p><p>fprintf out<br>printf</p></li></ul><p>./test &gt;file执行得到</p><pre><code>fprintf out</code></pre><p>vim file</p><pre><code>printf</code></pre><h1 id="用来消除在终端中，用户不想看到的内容"><a href="#用来消除在终端中，用户不想看到的内容" class="headerlink" title="用来消除在终端中，用户不想看到的内容"></a>用来消除在终端中，用户不想看到的内容</h1>]]></content>
+        <content type="html"><![CDATA[<pre><code>out=fopen(&quot;/dev/tty&quot;,&quot;w&quot;);printf(&quot;hello&quot;);sprintf(out,&quot;sprintf out\n&quot;);printf(&quot;printf\n&quot;);</code></pre><p>./test<br>执行得到</p><pre><code>fprintf outprintf</code></pre><p>./test &gt;file执行得到</p><pre><code>fprintf out</code></pre><p>vim file</p><pre><code>printf</code></pre><h1 id="用来消除在终端中，用户不想看到的内容"><a href="#用来消除在终端中，用户不想看到的内容" class="headerlink" title="用来消除在终端中，用户不想看到的内容"></a>用来消除在终端中，用户不想看到的内容</h1>]]></content>
       
       
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
       
     </entry>
     
