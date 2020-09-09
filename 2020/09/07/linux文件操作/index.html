@@ -22,15 +22,15 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="标准IO库标准io库以及头文件stdio.h为底层Io系统调用提供了一个通用的接口。 fopen函数fopen库函数类似底层的open系统调用。主要用于文件和终端的输入和输出。函数原型如下： #inlcude &lt;stdio.h&gt; FILE *open(const char *filename,const *mode)mode参数有一下几种：r、rb：以只读形式打开。 r 打开只读文件，">
+  <meta name="description" content="stat系统调用标准IO库标准io库以及头文件stdio.h为底层Io系统调用提供了一个通用的接口。 fopen函数fopen库函数类似底层的open系统调用。主要用于文件和终端的输入和输出。函数原型如下： #inlcude &lt;stdio.h&gt; FILE *open(const char *filename,const *mode)mode参数有一下几种：r、rb：以只读形式打开。 r">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux文件操作">
 <meta property="og:url" content="http://yoursite.com/2020/09/07/linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="小Cのblog">
-<meta property="og:description" content="标准IO库标准io库以及头文件stdio.h为底层Io系统调用提供了一个通用的接口。 fopen函数fopen库函数类似底层的open系统调用。主要用于文件和终端的输入和输出。函数原型如下： #inlcude &lt;stdio.h&gt; FILE *open(const char *filename,const *mode)mode参数有一下几种：r、rb：以只读形式打开。 r 打开只读文件，">
+<meta property="og:description" content="stat系统调用标准IO库标准io库以及头文件stdio.h为底层Io系统调用提供了一个通用的接口。 fopen函数fopen库函数类似底层的open系统调用。主要用于文件和终端的输入和输出。函数原型如下： #inlcude &lt;stdio.h&gt; FILE *open(const char *filename,const *mode)mode参数有一下几种：r、rb：以只读形式打开。 r">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-07T03:30:00.000Z">
-<meta property="article:modified_time" content="2020-09-07T05:50:38.079Z">
+<meta property="article:modified_time" content="2020-09-07T06:44:56.427Z">
 <meta property="article:author" content="C C">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="文件系统">
@@ -226,7 +226,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-09-07 11:30:00 / 修改时间：13:50:38" itemprop="dateCreated datePublished" datetime="2020-09-07T11:30:00+08:00">2020-09-07</time>
+              <time title="创建时间：2020-09-07 11:30:00 / 修改时间：14:44:56" itemprop="dateCreated datePublished" datetime="2020-09-07T11:30:00+08:00">2020-09-07</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -249,7 +249,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="标准IO库"><a href="#标准IO库" class="headerlink" title="标准IO库"></a>标准IO库</h1><p>标准io库以及头文件stdio.h为底层Io系统调用提供了一个通用的接口。</p>
+        <h1 id="stat系统调用"><a href="#stat系统调用" class="headerlink" title="stat系统调用"></a>stat系统调用</h1><h1 id="标准IO库"><a href="#标准IO库" class="headerlink" title="标准IO库"></a>标准IO库</h1><p>标准io库以及头文件stdio.h为底层Io系统调用提供了一个通用的接口。</p>
 <h2 id="fopen函数"><a href="#fopen函数" class="headerlink" title="fopen函数"></a>fopen函数</h2><p>fopen库函数类似底层的open系统调用。主要用于文件和终端的输入和输出。函数原型如下：</p>
 <pre><code>#inlcude &lt;stdio.h&gt;
 FILE *open(const char *filename,const *mode)</code></pre><p>mode参数有一下几种：<br>r、rb：以只读形式打开。</p>
@@ -295,7 +295,7 @@ int rmdir(const char *path)</code></pre><p>chdir 切换目录</p>
 <h3 id="opendir函数"><a href="#opendir函数" class="headerlink" title="opendir函数"></a>opendir函数</h3><p>opendir函数的作用是打开一个目录并建立一个目录流。成功则返回一个指向DIR结构的指针，用来读取目录数据项。</p>
 <pre><code>#include &lt;sys/types.h&gt;
 #include &lt;dirent.h&gt;
-DiR *opendir(const char *name)</code></pre><h3 id="readdir函数"><a href="#readdir函数" class="headerlink" title="readdir函数"></a>readdir函数</h3><p>readdir函数返回一个 指向目录中下一个目录项的有关资料</p>
+DiR *opendir(const char *name)</code></pre><h3 id="readdir函数"><a href="#readdir函数" class="headerlink" title="readdir函数"></a>readdir函数</h3><p>readdir函数返回一个 指向目录中下一个目录项的有关资料，到尾返回NULL。</p>
 <pre><code>#include &lt;sys/types.h&gt;
 #include &lt;dirent.h&gt;
 struct dirent *readdir (DiR *dirp)</code></pre><p><font color="#FF0000">dirent结构中包含的目录项有：</font></p>
@@ -325,7 +325,10 @@ int closedir（DIR *dirp）</code></pre>
     <a href="/2020/05/15/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E7%AE%97%E6%B3%95/" rel="prev" title="数据挖掘算法">
       <i class="fa fa-chevron-left"></i> 数据挖掘算法
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/09/09/fprintf%E5%92%8Cprintf/" rel="next" title="fprintf和printf">
+      fprintf和printf <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -384,7 +387,7 @@ int closedir（DIR *dirp）</code></pre>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#标准IO库"><span class="nav-number">1.</span> <span class="nav-text">标准IO库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#fopen函数"><span class="nav-number">1.1.</span> <span class="nav-text">fopen函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fread函数"><span class="nav-number">1.2.</span> <span class="nav-text">fread函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fwrite函数"><span class="nav-number">1.3.</span> <span class="nav-text">fwrite函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fgetc、getc、getchar-函数"><span class="nav-number">1.4.</span> <span class="nav-text">fgetc、getc、getchar 函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fputc、putc、putchar函数"><span class="nav-number">1.5.</span> <span class="nav-text">fputc、putc、putchar函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fprintf函数"><span class="nav-number">1.6.</span> <span class="nav-text">fprintf函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件流错误"><span class="nav-number">1.7.</span> <span class="nav-text">文件流错误</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目录维护"><span class="nav-number">2.</span> <span class="nav-text">目录维护</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mkdir和rmdir系统调用"><span class="nav-number">2.1.</span> <span class="nav-text">mkdir和rmdir系统调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扫描目录"><span class="nav-number">2.2.</span> <span class="nav-text">扫描目录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#opendir函数"><span class="nav-number">2.2.1.</span> <span class="nav-text">opendir函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#readdir函数"><span class="nav-number">2.2.2.</span> <span class="nav-text">readdir函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#closedir函数"><span class="nav-number">2.2.3.</span> <span class="nav-text">closedir函数</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#stat系统调用"><span class="nav-number">1.</span> <span class="nav-text">stat系统调用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标准IO库"><span class="nav-number">2.</span> <span class="nav-text">标准IO库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#fopen函数"><span class="nav-number">2.1.</span> <span class="nav-text">fopen函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fread函数"><span class="nav-number">2.2.</span> <span class="nav-text">fread函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fwrite函数"><span class="nav-number">2.3.</span> <span class="nav-text">fwrite函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fgetc、getc、getchar-函数"><span class="nav-number">2.4.</span> <span class="nav-text">fgetc、getc、getchar 函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fputc、putc、putchar函数"><span class="nav-number">2.5.</span> <span class="nav-text">fputc、putc、putchar函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fprintf函数"><span class="nav-number">2.6.</span> <span class="nav-text">fprintf函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件流错误"><span class="nav-number">2.7.</span> <span class="nav-text">文件流错误</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目录维护"><span class="nav-number">3.</span> <span class="nav-text">目录维护</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mkdir和rmdir系统调用"><span class="nav-number">3.1.</span> <span class="nav-text">mkdir和rmdir系统调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扫描目录"><span class="nav-number">3.2.</span> <span class="nav-text">扫描目录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#opendir函数"><span class="nav-number">3.2.1.</span> <span class="nav-text">opendir函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#readdir函数"><span class="nav-number">3.2.2.</span> <span class="nav-text">readdir函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#closedir函数"><span class="nav-number">3.2.3.</span> <span class="nav-text">closedir函数</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -400,7 +403,7 @@ int closedir（DIR *dirp）</code></pre>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -450,7 +453,7 @@ int closedir（DIR *dirp）</code></pre>
   </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共2.9k字</span>
+  <span class="post-count">博客全站共3k字</span>
 </div>
 
         
