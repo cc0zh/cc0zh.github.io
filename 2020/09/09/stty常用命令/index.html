@@ -22,17 +22,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="第一次创博客，还在探索中！がんばる">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小Cのblog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="stty是一个用来改变并打印终端行设置的常用命令。###1 ,在命令行下,禁止输出大写的方法 stty -icanon 设置一次性读完操作，如使用getchar()读操作，不需要按enter stty icanon 取消上面设置 stty -a 查看 信息 stty -echo 设置命令不被显示 stty echo 取消不显设置 stty raw -echo stty raw echo stty">
+<meta property="og:type" content="article">
+<meta property="og:title" content="stty常用命令">
+<meta property="og:url" content="http://yoursite.com/2020/09/09/stty%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="小Cのblog">
-<meta property="og:description" content="第一次创博客，还在探索中！がんばる">
+<meta property="og:description" content="stty是一个用来改变并打印终端行设置的常用命令。###1 ,在命令行下,禁止输出大写的方法 stty -icanon 设置一次性读完操作，如使用getchar()读操作，不需要按enter stty icanon 取消上面设置 stty -a 查看 信息 stty -echo 设置命令不被显示 stty echo 取消不显设置 stty raw -echo stty raw echo stty">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-09T09:50:44.782Z">
+<meta property="article:modified_time" content="2020-09-13T07:42:26.373Z">
 <meta property="article:author" content="C C">
+<meta property="article:tag" content="stty,终端">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/archives/">
+<link rel="canonical" href="http://yoursite.com/2020/09/09/stty%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
 
 
 <script id="page-configurations">
@@ -40,12 +43,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | 小Cのblog</title>
+  <title>stty常用命令 | 小Cのblog</title>
   
 
 
@@ -191,230 +194,113 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 10 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/09/stty%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="C C">
+      <meta itemprop="description" content="第一次创博客，还在探索中！がんばる">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小Cのblog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          stty常用命令
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-09-09 17:50:44" itemprop="dateCreated datePublished" datetime="2020-09-09T17:50:44+08:00">2020-09-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-09-13 15:42:26" itemprop="dateModified" datetime="2020-09-13T15:42:26+08:00">2020-09-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-09-13T15:38:19+08:00"
-              content="2020-09-13">
-          09-13
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/09/13/fcntl%E5%87%BD%E6%95%B0/" itemprop="url">
-            <span itemprop="name">fcntl函数来锁定文件</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-09-09T17:50:44+08:00"
-              content="2020-09-09">
-          09-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/09/09/stty%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" itemprop="url">
-            <span itemprop="name">stty常用命令</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-09-09T14:15:02+08:00"
-              content="2020-09-09">
-          09-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/09/09/fprintf%E5%92%8Cprintf/" itemprop="url">
-            <span itemprop="name">sprintf和printf</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-09-07T11:30:00+08:00"
-              content="2020-09-07">
-          09-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/09/07/linux%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" itemprop="url">
-            <span itemprop="name">linux文件操作</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-05-15T17:21:13+08:00"
-              content="2020-05-15">
-          05-15
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/05/15/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E7%AE%97%E6%B3%95/" itemprop="url">
-            <span itemprop="name">数据挖掘算法</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-05-14T14:05:50+08:00"
-              content="2020-05-14">
-          05-14
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/05/14/%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4/" itemprop="url">
-            <span itemprop="name">机器人运动范围</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-05-12T13:13:40+08:00"
-              content="2020-05-12">
-          05-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/05/12/%E4%B8%80%E6%A3%B5%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6/" itemprop="url">
-            <span itemprop="name">leetcode104一棵树的最大深度</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-05-11T22:07:46+08:00"
-              content="2020-05-11">
-          05-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/05/11/leetcode50-pow-x-n/" itemprop="url">
-            <span itemprop="name">leetcode50-pow-x-n</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-05-11T17:43:47+08:00"
-              content="2020-05-11">
-          05-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/05/11/PAT1155Heap-paths/" itemprop="url">
-            <span itemprop="name">PAT1155heap-path</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-05-09T23:05:00+08:00"
-              content="2020-05-09">
-          05-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/05/09/my-first-post/" itemprop="url">
-            <span itemprop="name">Markdown的基本语法</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+        <p>stty是一个用来改变并打印终端行设置的常用命令。<br>###1 ,在命令行下,禁止输出大写的方法</p>
+<p>stty -icanon 设置一次性读完操作，如使用getchar()读操作，不需要按enter</p>
+<p>stty icanon 取消上面设置</p>
+<p>stty -a 查看 信息</p>
+<p>stty -echo 设置命令不被显示</p>
+<p>stty echo 取消不显设置</p>
+<p>stty raw -echo</p>
+<p>stty raw echo</p>
+<p>stty iuclc #开启</p>
+<p>stty -iuclc #恢复</p>
+<p>###2,在命令行下禁止输出小写<br>            <a id="more"></a><br>stty olcuc #开启<br>stty -olcuc#恢复</p>
+<p>###3,打印出终端的行数和列数</p>
+<p>stty size</p>
+<p>###4,屏蔽显示</p>
+<p>stty -echo #禁止回显</p>
+<p>stty echo #打开回显</p>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/stty-%E7%BB%88%E7%AB%AF/" rel="tag"># stty,终端</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/09/09/fprintf%E5%92%8Cprintf/" rel="prev" title="sprintf和printf">
+      <i class="fa fa-chevron-left"></i> sprintf和printf
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/09/13/fcntl%E5%87%BD%E6%95%B0/" rel="next" title="fcntl函数来锁定文件">
+      fcntl函数来锁定文件 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 

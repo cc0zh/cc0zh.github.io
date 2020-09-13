@@ -197,6 +197,178 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/13/fcntl%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="C C">
+      <meta itemprop="description" content="第一次创博客，还在探索中！がんばる">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小Cのblog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/09/13/fcntl%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">fcntl函数来锁定文件</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-09-13 15:38:19 / 修改时间：15:41:51" itemprop="dateCreated datePublished" datetime="2020-09-13T15:38:19+08:00">2020-09-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/fcntl/" itemprop="url" rel="index"><span itemprop="name">fcntl</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/fcntl/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="fcntl函数的使用示例"><a href="#fcntl函数的使用示例" class="headerlink" title="fcntl函数的使用示例"></a>fcntl函数的使用示例</h2><p>int fctnl(int fildes,int command,flock* flock_struct)</p>
+<p>第三个参数必须是指针                                                             command分为三个：F_GETLK,F_SETLK,F_SETLKW</p>
+<p>flock_struct包含l_type(锁的类型) :F_RDLCK,F_UNLCK,WRLCK                                                                 L_whence(文件初始位置)：SEEK_SET,SEEK_CUR,SEEK_END                                                         L_start                                                           L_len<br></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/09/13/fcntl%E5%87%BD%E6%95%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/09/stty%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="C C">
+      <meta itemprop="description" content="第一次创博客，还在探索中！がんばる">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小Cのblog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/09/09/stty%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">stty常用命令</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-09-09 17:50:44" itemprop="dateCreated datePublished" datetime="2020-09-09T17:50:44+08:00">2020-09-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-09-13 15:42:26" itemprop="dateModified" datetime="2020-09-13T15:42:26+08:00">2020-09-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>stty是一个用来改变并打印终端行设置的常用命令。<br>###1 ,在命令行下,禁止输出大写的方法</p>
+<p>stty -icanon 设置一次性读完操作，如使用getchar()读操作，不需要按enter</p>
+<p>stty icanon 取消上面设置</p>
+<p>stty -a 查看 信息</p>
+<p>stty -echo 设置命令不被显示</p>
+<p>stty echo 取消不显设置</p>
+<p>stty raw -echo</p>
+<p>stty raw echo</p>
+<p>stty iuclc #开启</p>
+<p>stty -iuclc #恢复</p>
+<p>###2,在命令行下禁止输出小写<br></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/09/09/stty%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/09/fprintf%E5%92%8Cprintf/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -875,20 +1047,20 @@ FILE *open(const char *filename,const *mode)</code></pre><p>mode参数有一下�
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -925,7 +1097,7 @@ FILE *open(const char *filename,const *mode)</code></pre><p>mode参数有一下�
   </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共3k字</span>
+  <span class="post-count">博客全站共3.4k字</span>
 </div>
 
         

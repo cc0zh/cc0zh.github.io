@@ -4,6 +4,58 @@
   
     
     <entry>
+      <title>fcntl函数来锁定文件</title>
+      <link href="/2020/09/13/fcntl%E5%87%BD%E6%95%B0/"/>
+      <url>/2020/09/13/fcntl%E5%87%BD%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<h2 id="fcntl函数的使用示例"><a href="#fcntl函数的使用示例" class="headerlink" title="fcntl函数的使用示例"></a>fcntl函数的使用示例</h2><p>int fctnl(int fildes,int command,flock* flock_struct)</p><p>第三个参数必须是指针                                                             command分为三个：F_GETLK,F_SETLK,F_SETLKW</p><p>flock_struct包含l_type(锁的类型) :F_RDLCK,F_UNLCK,WRLCK                                                                 L_whence(文件初始位置)：SEEK_SET,SEEK_CUR,SEEK_END                                                         L_start                                                           L_len<br>        <a id="more"></a></p><pre><code>#include &lt;unistd.h&gt;#include &lt;stdlib.h&gt;#include &lt;stdio.h&gt;#include &lt;fcntl.h&gt;const char *test_file=&quot;/tmp/test_lock&quot;;int main(){    int file_desc;    int byte_count;    char *byte_to_write=&quot;A&quot;;    struct flock region_1;    struct flock region_2;    int res;    file_desc=open(test_file,O_RDWR|O_CREAT,0666);    if(!file_desc){            fprintf(stderr,&quot;Unable to open %s read or write\n&quot;,test_file);            exit(EXIT_FAILURE);    }    for(byte_count=0;byte_count&lt;100;byte_count++){            (void)write(file_desc,byte_to_write,1);    }    region_1.l_type=F_RDLCK;                                //设置读锁（共享锁），在文件的10-30个字节内    region_1.l_whence=SEEK_SET;    rergion_1.l_start=10;    region_1.l_len=20;    region_2.l_type=F_WRLCK;    region_2.l_whence=SEEK_SET;    region_2.l_start=40;    region_2.l_len=10;    printf(&quot;Process %d locking file\n&quot;,getpid());    res=fcntl(file_desc,F_SETLK,&amp;region_1);                 //加锁失败返回-1，否则返回非-1数    if(res==-1)fprintf(stderr,&quot;Failed to lock region 1\n&quot;);    res=fcntl(file_desc,F_SETLK,&amp;region_2);    if(res==-1)fprintf(stderr,&quot;Failed to lock region 2\n&quot;);    sleep(60);    printf(&quot;Process %d closing file\n&quot;,getpid());    close(file_desc);    exit(EXIT_SUCCESS);</code></pre><p>}</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> fcntl </category>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>stty常用命令</title>
+      <link href="/2020/09/09/stty%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+      <url>/2020/09/09/stty%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<p>stty是一个用来改变并打印终端行设置的常用命令。<br>###1 ,在命令行下,禁止输出大写的方法</p><p>stty -icanon 设置一次性读完操作，如使用getchar()读操作，不需要按enter</p><p>stty icanon 取消上面设置</p><p>stty -a 查看 信息</p><p>stty -echo 设置命令不被显示</p><p>stty echo 取消不显设置</p><p>stty raw -echo</p><p>stty raw echo</p><p>stty iuclc #开启</p><p>stty -iuclc #恢复</p><p>###2,在命令行下禁止输出小写<br>            <a id="more"></a><br>stty olcuc #开启<br>stty -olcuc#恢复</p><p>###3,打印出终端的行数和列数</p><p>stty size</p><p>###4,屏蔽显示</p><p>stty -echo #禁止回显</p><p>stty echo #打开回显</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> stty,终端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>sprintf和printf</title>
       <link href="/2020/09/09/fprintf%E5%92%8Cprintf/"/>
       <url>/2020/09/09/fprintf%E5%92%8Cprintf/</url>
